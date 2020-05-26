@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Grid } from "theme-ui"
-import { Link } from "gatsby"
+import { jsx } from "theme-ui"
+
 import Container from "./Container"
 
 export default () => (

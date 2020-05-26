@@ -1,8 +1,6 @@
 /** @jsx jsx */
-import { jsx, Grid, NavLink, Heading, Button } from "theme-ui"
+import { jsx, Grid } from "theme-ui"
 import GatsbyLink from "./GatsbyLink"
-import ToggleColorMode from "./ToggleColorMode"
-import StyledButton from "./StyledButton"
 import Container from "./Container"
 
 const apps = [

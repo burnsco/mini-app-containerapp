@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Heading, Grid, Flex } from "theme-ui"
+import { jsx, Heading, Flex } from "theme-ui"
 import ToggleColorMode from "./ToggleColorMode"
 import Container from "./Container"
 
