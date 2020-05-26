@@ -15,7 +15,7 @@ export default props => (
         bg: "highlight",
       },
       "&.active": {
-        color: "primary",
+        color: "text",
         borderRadius: 3,
         bg: "highlight",
       },

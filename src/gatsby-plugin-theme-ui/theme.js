@@ -31,7 +31,7 @@ var index = {
     },
   },
   fonts: {
-    body: "Cabin",
+    body: "Inter",
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
@@ -41,20 +41,20 @@ var index = {
   },
   layout: {
     header: {
-      borderBottom: "1px solid orange",
+      bg: "highlight",
     },
     aside: {
+      bg: "muted",
       p: 2,
-      border: "1px solid blue",
     },
     main: {
       flex: "1 1 auto",
       p: 3,
-      border: "1px solid red",
     },
     footer: {
+      bg: "text",
+      color: "background",
       width: "100%",
-      border: "1px solid green",
     },
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
@@ -149,6 +149,10 @@ var index = {
       primary: {
         color: "background",
         bg: "primary",
+      },
+      inverted: {
+        color: "primary",
+        bg: "background",
       },
       secondary: {
         color: "background",

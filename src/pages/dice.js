@@ -2,16 +2,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import { Text } from "theme-ui"
+import { Heading } from "theme-ui"
 import SEO from "../components/seo"
 
 const dice = () => (
   <Layout>
     <SEO title="Roll-Dice" />
-
-    <Text>Home Page</Text>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Heading>Dice</Heading>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
