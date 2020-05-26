@@ -28,10 +28,64 @@ var index = {
     secondary: "#119",
     muted: "#f6f6f6",
     highlight: "#efeffe",
-    // '#ffffcc',
     gray: "#777",
     accent: "#609",
     modes: {
+      polaris: {
+        text: "#454f5b",
+        background: "#fff",
+        primary: "#5c6ac4",
+        secondary: "#006fbb",
+        highlight: "#47c1bf",
+        muted: "#e6e6e6",
+        gray: "#dfe3e8",
+        accent: "#f49342",
+        darken: "#00044c",
+      },
+      polarisdark: {
+        text: "#3e4155",
+        background: "#000639",
+        primary: "#9c6ade",
+        secondary: "#b4e1fa",
+        highlight: "#b7ecec",
+        muted: "#e6e6e6",
+        accent: "#f49342",
+        darken: "#00044c",
+      },
+      tosh: {
+        text: "#000",
+        background: "#fff",
+        primary: "#000",
+        secondary: "#3f3f3f",
+        muted: "#e0e0e0",
+        highlight: "#9f9f9f",
+        gray: "#6c6c6c",
+        accent: "#3f3f3f",
+      },
+      toshdark: {
+        text: "#fff",
+        background: "#060606",
+        primary: "#d2d2d2",
+        secondary: "#b2b2b2",
+        muted: "#191919",
+        highlight: "#3c3c3c",
+        gray: "#999",
+        accent: "#e0e0e0",
+      },
+      funk: {
+        text: "#000",
+        background: "#fff",
+        primary: "#609",
+        secondary: "#306",
+        muted: "#f6f6f6",
+      },
+      roboto: {
+        text: "#202124",
+        background: "#fff",
+        primary: "#1a73e8",
+        secondary: "#9c27b0",
+        muted: "#f1f3f4",
+      },
       dark: {
         text: "#fff",
         background: "#060606",
@@ -66,16 +120,28 @@ var index = {
   },
   fonts: {
     body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
   sizes: {
     container: 1300,
+    sidebar: 200,
+  },
+  layout: {
+    main: {
+      flexGrow: 99999,
+      flexBasis: 0,
+      minWidth: 320,
+    },
+    footer: {
+      height: "40px",
+    },
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   fontWeights: {
     body: 400,
+    bold: 500,
     heading: 700,
     display: 900,
   },
@@ -93,11 +159,53 @@ var index = {
       mt: 3,
     },
   },
-  styles: {
-    Container: {
-      p: 3,
-      maxWidth: 1024,
+  buttons: {
+    secondary: {
+      fontWeight: "bold",
+      color: "white",
+      bg: "primary",
+      "&:hover": {
+        bg: "dark",
+      },
     },
+  },
+  letterSpacings: {
+    heading: "-0.05em",
+    caps: "0.1em",
+  },
+  text: {
+    caps: {
+      textTransform: "uppercase",
+      letterSpacing: ".2em",
+    },
+    heading: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
+    },
+    display: {
+      // extends the text.heading styles
+      variant: "text.heading",
+      fontSize: [6, 7, 8],
+      fontWeight: "display",
+    },
+  },
+  links: {
+    nav: {
+      px: 2,
+      py: 1,
+      textTransform: "uppercase",
+      letterSpacing: "0.2em",
+    },
+  },
+  cards: {
+    primary: {
+      padding: 2,
+      borderRadius: 4,
+      boxShadow: "0 0 4px 1px rgba(0, 0, 0, 0.5)",
+    },
+  },
+  styles: {
     root: {
       fontFamily: "body",
       lineHeight: "body",
@@ -129,9 +237,24 @@ var index = {
     a: {
       color: "primary",
       "&:hover": {
-        color: "secondary",
+        color: "highlight",
       },
     },
+    buttons: {
+      primary: {
+        color: "background",
+        bg: "primary",
+      },
+      secondary: {
+        color: "background",
+        bg: "secondary",
+      },
+      gray: {
+        color: "background",
+        bg: "gray",
+      },
+    },
+
     pre: {
       fontFamily: "monospace",
       fontSize: 1,

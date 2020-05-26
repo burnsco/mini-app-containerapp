@@ -1,19 +1,28 @@
 /** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
+import { jsx, Grid } from "theme-ui"
+import Header from "./Header"
 import Container from "./Container"
-import PropTypes from "prop-types"
+import NavLinkList from "./NavLinkList"
+import Footer from "./Footer"
 
-const Layout = props => (
-  <Flex
+export default props => (
+  <Grid
     sx={{
       "*,\n  *:before,\n  *:after": {
         boxSizing: "border-box",
         WebkitBoxSizing: "border-box",
         MozBoxSizing: "border-box",
       },
-      flexDirection: "column",
+      "@media screen and (min-width: 500px)": {
+        margin: "0 auto",
+        gridTemplateColumns: "1fr 3fr",
+        aside: { cssFloat: "left", width: "19.1489%" },
+        main: { cssFloat: "right", width: "79.7872%" },
+        header: { gridColumn: "1 / -1", clear: "both" },
+        footer: { gridColumn: "1 / -1", clear: "both" },
+      },
+      gridgap: 3,
       minHeight: "100vh",
-      scrollBehavior: "smooth",
       webkitFontSmoothing: "antialiased",
       mozOsxFontSmoothing: "grayscale",
       textRendering: "optimizeLegibility",
@@ -24,37 +33,21 @@ const Layout = props => (
       msFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
       webkitFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
       fontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
+      variant: "layout.root",
     }}
   >
-    <header
-      sx={{
-        width: "100%",
-      }}
-    >
-      <Container>Header</Container>
+    <header>
+      <Header />
     </header>
+    <aside>
+      <Container>
+        <NavLinkList />
+      </Container>
+    </aside>
 
-    <main
-      sx={{
-        width: "100%",
-        flex: "1 1 auto",
-      }}
-    >
+    <main>
       <Container>{props.children}</Container>
     </main>
-
-    <footer
-      sx={{
-        width: "100%",
-      }}
-    >
-      <Container>Footer</Container>
-    </footer>
-  </Flex>
+    <Footer />
+  </Grid>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
