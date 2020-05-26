@@ -2,18 +2,18 @@ import React from "react"
 
 import Layout from "../components/Layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
 import { Text } from "theme-ui"
+import SEO from "../components/seo"
 
-const IndexPage = () => (
+const lottery = () => (
   <Layout>
-    <SEO title="CB" />
+    <SEO title="Lottery Generator" />
 
-    <Text>Home Page</Text>
+    <Text>lottery</Text>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
   </Layout>
 )
 
-export default IndexPage
+export default lottery

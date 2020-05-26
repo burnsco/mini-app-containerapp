@@ -1,23 +1,19 @@
 /** @jsx jsx */
-import { jsx, Grid, Heading } from "theme-ui"
-import { Link } from "gatsby"
+import { jsx, Heading, Grid, Flex } from "theme-ui"
+import ToggleColorMode from "./ToggleColorMode"
+import Container from "./Container"
 
 export default () => (
-  <div
-    sx={{
-      variant: "styles.header",
-    }}
-  >
-    <div
+  <Container variant="layout.header">
+    <Flex
       sx={{
-        maxWidth: "container",
-        mx: "auto",
-        px: [4, 5, 6],
-        display: "flex",
-        alignItems: "baseline",
+        alignItems: "center",
       }}
     >
       <Heading variant="textStyles.display">Mini Apps</Heading>
-    </div>
-  </div>
+      <div sx={{ mx: "auto" }}>
+        <ToggleColorMode>Toggle</ToggleColorMode>
+      </div>
+    </Flex>
+  </Container>
 )

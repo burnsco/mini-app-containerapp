@@ -8,14 +8,16 @@ export default props => (
     activeClassName="active"
     sx={{
       textDecoration: "none",
-      fontSize: [1, 1, 2],
       fontWeight: "bold",
       color: "inherit",
       "&:hover": {
-        color: "primary",
+        borderRadius: 3,
+        bg: "highlight",
       },
       "&.active": {
         color: "primary",
+        borderRadius: 3,
+        bg: "highlight",
       },
     }}
   />

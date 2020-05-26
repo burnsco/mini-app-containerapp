@@ -1,23 +1,13 @@
 /** @jsx jsx */
 import { jsx, useColorMode, Button } from "theme-ui"
 
-const modes = [
-  "dark",
-  "deep",
-  "swiss",
-  "light",
-  "system",
-  "polaris",
-  "polarisdark",
-  "tosh",
-  "toshdark",
-  "funk",
-]
+const modes = ["deep", "swiss"]
 
 export default props => {
   const [mode, setMode] = useColorMode()
   return (
     <Button
+      sx={{ variant: "secondary" }}
       {...props}
       onClick={e => {
         const index = modes.indexOf(mode)
