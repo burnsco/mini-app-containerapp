@@ -1,48 +1,57 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+/** @jsx jsx */
+import { jsx, Flex } from "theme-ui"
+import Container from "./Container"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+const Layout = props => (
+  <Flex
+    sx={{
+      "*,\n  *:before,\n  *:after": {
+        boxSizing: "border-box",
+        WebkitBoxSizing: "border-box",
+        MozBoxSizing: "border-box",
+      },
+      flexDirection: "column",
+      minHeight: "100vh",
+      scrollBehavior: "smooth",
+      webkitFontSmoothing: "antialiased",
+      mozOsxFontSmoothing: "grayscale",
+      textRendering: "optimizeLegibility",
+      overflowX: "hidden",
+      wordWrap: "break-word",
+      fontKerning: "normal",
+      mozFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
+      msFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
+      webkitFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
+      fontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
+    }}
+  >
+    <header
+      sx={{
+        width: "100%",
+      }}
+    >
+      <Container>Header</Container>
+    </header>
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+    <main
+      sx={{
+        width: "100%",
+        flex: "1 1 auto",
+      }}
+    >
+      <Container>{props.children}</Container>
+    </main>
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+    <footer
+      sx={{
+        width: "100%",
+      }}
+    >
+      <Container>Footer</Container>
+    </footer>
+  </Flex>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,8 +1,8 @@
-// See other presets to try at https://theme-ui.com/packages/presets
-import { funk } from '@theme-ui/presets'
+import theme from "./theme"
+
 export default {
-  ...funk,
+  ...theme,
   styles: {
-    ...funk.styles,
+    ...theme.styles,
   },
 }
