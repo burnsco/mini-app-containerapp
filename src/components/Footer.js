@@ -2,24 +2,28 @@
 import { jsx } from "theme-ui"
 
 import Container from "./Container"
+import { useSiteMetadata } from "../hooks/useSiteMetaData"
 
-export default () => (
-  <Container variant="layout.footer">
-    <footer
-      sx={{
-        fontSize: 1,
-        variant: "styles.footer",
-      }}
-    >
-      <div
+export default () => {
+  const { author } = useSiteMetadata()
+  return (
+    <Container variant="layout.footer">
+      <footer
         sx={{
-          display: "flex",
-          justifyContent: "flex-end",
-          p: 3,
+          fontSize: 1,
+          variant: "styles.footer",
         }}
       >
-        <div sx={{ mx: 1 }} />© 2019 Corey Burns
-      </div>
-    </footer>
-  </Container>
-)
+        <div
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            p: 3,
+          }}
+        >
+          <div sx={{ mx: 1 }} />© 2020 {author}
+        </div>
+      </footer>
+    </Container>
+  )
+}

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Mini Apps & Experiments`,
+    title: `Mini Apps`,
     description: `A place to store old apps I made in my learning journey and little experiments and learning projects that are "mini"`,
-    author: `@gatsbyjs`,
+    author: `Corey Burns`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

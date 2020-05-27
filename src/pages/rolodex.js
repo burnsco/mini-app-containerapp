@@ -1,19 +1,48 @@
-import React from "react"
-
+import React, { Component } from "react"
+import { SearchBox } from "../components/Apps/Rolodex/SearchBox"
+import { CardList } from "../components/Apps/Rolodex/CardList"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import { Text } from "theme-ui"
-import SEO from "../components/seo"
 
-const rolodex = () => (
-  <Layout>
-    <SEO title="Monsters Rolodex" />
+export default class MonsterRolodex extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      users: [],
+      input: "",
+    }
+  }
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(json =>
+        this.setState(state => ({
+          users: json,
+        }))
+      )
+  }
 
-    <Text>rolodex</Text>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-  </Layout>
-)
+  handleChange(e) {
+    this.setState({ input: e.target.value })
+  }
 
-export default rolodex
+  render() {
+    const { users, input } = this.state
+    const filteredUsers = users.filter(user =>
+      user.name.toLowerCase().includes(input.toLowerCase())
+    )
+
+    return (
+      <Layout>
+        <h1>Monsters Rolodex</h1>
+        <SearchBox
+          type="search"
+          value={input}
+          handleChange={this.handleChange}
+          placeholder="search..."
+        />
+
+        <CardList users={filteredUsers} />
+      </Layout>
+    )
+  }
+}

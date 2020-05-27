@@ -3,16 +3,19 @@ import React from "react"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { Text } from "theme-ui"
+import { Text, Heading } from "theme-ui"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="CB" />
 
-    <Text>Home Page</Text>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    <Heading>
+      A place to store the apps I first made in my coding journey.
+    </Heading>
+    <Heading>
+      Also a place to experiment with new things and store my small apps I will
+      make in the future
+    </Heading>
   </Layout>
 )
 

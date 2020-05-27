@@ -1,19 +1,10 @@
-import React from "react"
-
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import { Text } from "theme-ui"
-import SEO from "../components/seo"
+import PizzaCalculatorApp from "../components/Apps/Pizza/container/App"
 
-const pizza = () => (
+export default () => (
   <Layout>
-    <SEO title="Pizza Calculator" />
-
-    <Text>pizza</Text>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    <PizzaCalculatorApp />
   </Layout>
 )
-
-export default pizza
