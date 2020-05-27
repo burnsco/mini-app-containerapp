@@ -50,7 +50,8 @@ var index = {
     },
     main: {
       flex: "1 1 auto",
-      p: 3,
+      display: "flex",
+      alignItems: "center",
     },
     footer: {
       bg: "text",
