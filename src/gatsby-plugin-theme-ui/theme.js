@@ -44,6 +44,7 @@ var index = {
       bg: "highlight",
     },
     aside: {
+      border: "1px solid gray",
       bg: "muted",
       p: 2,
     },

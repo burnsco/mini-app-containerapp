@@ -10,6 +10,7 @@ const apps = [
   { id: "luggage-tracker", title: "Luggage Tracker", path: "/luggage/" },
   { id: "pizza-calculator", title: "Pizza Calculator", path: "/pizza/" },
   { id: "monsters-rolodex", title: "Monsters Rolodex", path: "/rolodex/" },
+  { id: "coin-flip", title: "Flip Coin", path: "/coin/" },
 ]
 
 export default () => (

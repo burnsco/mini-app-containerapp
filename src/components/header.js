@@ -12,7 +12,7 @@ export default () => (
     >
       <Heading variant="textStyles.display">Mini Apps</Heading>
       <div sx={{ mx: "auto" }}>
-        <ToggleColorMode>Toggle</ToggleColorMode>
+        <ToggleColorMode>Toggle Theme</ToggleColorMode>
       </div>
     </Flex>
   </Container>
