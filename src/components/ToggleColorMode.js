@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useColorMode, Button, IconButton } from "theme-ui"
+import { jsx, useColorMode, Button } from "theme-ui"
 
 const modes = ["deep", "swiss"]
 

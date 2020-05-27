@@ -25,24 +25,21 @@ export default () => {
 
   return (
     <Layout>
-      <div style={{ textAlign: "center" }}>
-        <h1>Count Flips</h1>
+      <h1>Count Flips</h1>
 
-        <img src={flip ? Heads : Tails} height="18%" width="18%" alt="Heads" />
+      <img src={flip ? Heads : Tails} height="18%" width="18%" alt="Heads" />
 
-        <p>
-          {" "}
-          <button type="button" onClick={() => flipCoin()}>
-            Flip Me!
-          </button>
-        </p>
-        <p>
-          Out of <strong>{flips}</strong> flips, there have been{" "}
-          <em>{heads} </em>
-          heads and
-          <em> {tails}</em> tails
-        </p>
-      </div>
+      <p>
+        {" "}
+        <button type="button" onClick={() => flipCoin()}>
+          Flip Me!
+        </button>
+      </p>
+      <p>
+        Out of <strong>{flips}</strong> flips, there have been <em>{heads} </em>
+        heads and
+        <em> {tails}</em> tails
+      </p>
     </Layout>
   )
 }

@@ -1,19 +1,22 @@
-import React from "react"
-
+import React, { useState } from "react"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import { Text } from "theme-ui"
-import SEO from "../components/seo"
+import Lotto from "../components/Apps/Lottery"
+import { Heading } from "theme-ui"
 
-const lottery = () => (
-  <Layout>
-    <SEO title="Lottery Generator" />
-
-    <Text>lottery</Text>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-  </Layout>
-)
-
-export default lottery
+export default () => {
+  const [generate, setGenerate] = useState(false)
+  const refreshApp = () => {
+    setGenerate(!generate)
+  }
+  return (
+    <Layout>
+      <Heading>Lotto Generator Component</Heading>
+      <Lotto
+        title="Mini Daily"
+        numBalls={7}
+        maxNum={99}
+        generate={refreshApp}
+      />
+    </Layout>
+  )
+}

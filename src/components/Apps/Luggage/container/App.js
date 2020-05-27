@@ -1,6 +1,6 @@
 import React from "react"
 import LuggageTracker from "./LuggageTracker"
-import uuid from "uuid"
+import { v4 as uuid } from "uuid"
 import { useState } from "react"
 import { INITIAL_STATE } from "../data"
 

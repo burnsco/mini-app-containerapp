@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import CheckBox from '../../components/CheckBox'
+import React from "react"
+import styled from "@emotion/styled"
+import CheckBox from "../../components/CheckBox"
 
 const Container = styled.div`
   margin-top: 5px;

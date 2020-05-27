@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import ListItem from '../../components/ListItem'
-import ListHeader from '../../components/ListHeader'
-import FilterItem from '../../components/FilterItem'
-import AddItem from '../../components/AddItem'
-import Counter from '../../components/Counter'
+import React, { useState } from "react"
+import styled from "@emotion/styled"
+import ListItem from "../../components/ListItem"
+import ListHeader from "../../components/ListHeader"
+import FilterItem from "../../components/FilterItem"
+import AddItem from "../../components/AddItem"
+import Counter from "../../components/Counter"
 
 const MarkButton = styled.button`
   margin-top: 20px;
@@ -22,10 +22,10 @@ const LuggageTracker = ({
   input,
   handleSubmit,
   handleChange,
-  toggleAll
+  toggleAll,
 }) => {
-  const [filterOne, setFilterOne] = useState('')
-  const [filterTwo, setFilterTwo] = useState('')
+  const [filterOne, setFilterOne] = useState("")
+  const [filterTwo, setFilterTwo] = useState("")
 
   const handleOne = e => setFilterOne(e.target.value)
   const handleTwo = e => setFilterTwo(e.target.value)

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "@emotion/styled"
 
 const Container = styled.div`
   margin-top: 10px;
@@ -19,8 +19,8 @@ const CustomInput = styled.input`
   }
 `
 const Button = styled.button`
-  background: ${props => (props.primary ? 'palevioletred' : 'white')};
-  color: ${props => (props.primary ? 'white' : 'palevioletred')};
+  background: ${props => (props.primary ? "palevioletred" : "white")};
+  color: ${props => (props.primary ? "white" : "palevioletred")};
   font-size: 0.8em;
   border: 2px solid palevioletred;
 `
@@ -29,8 +29,8 @@ const AddItem = ({ handleChange, handleSubmit, input }) => (
   <Container>
     <CustomInput value={input} onChange={e => handleChange(e)} />
     <Button primary onClick={() => handleSubmit()}>
-      {' '}
-      SUBMIT{' '}
+      {" "}
+      SUBMIT{" "}
     </Button>
   </Container>
 )

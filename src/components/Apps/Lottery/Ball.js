@@ -1,21 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const CustomBall = styled.span`
-  height: 35px;
-  width: 35px;
-  margin: 5px;
-  background-color: rgb(84, 216, 113);
-  border-radius: 50%;
-  display: inline-block;
-`
+import React from "react"
 
 export const Ball = ({ value }) => {
   return (
     <div>
-      <CustomBall>
+      <span
+        sx={{
+          height: 35,
+          width: 35,
+          margin: 5,
+          backgroundColor: "rgb(84, 216, 113)",
+          borderRadius: "50%",
+          display: "inline-block",
+        }}
+      >
         <small>{value}</small>
-      </CustomBall>
+      </span>
     </div>
   )
 }
