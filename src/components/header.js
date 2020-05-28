@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Heading, Flex } from "theme-ui"
-import { graphql, useStaticQuery } from "gatsby"
 import { useSiteMetadata } from "../hooks/useSiteMetaData.js"
 import ToggleColorMode from "./ToggleColorMode"
 import Container from "./Container"

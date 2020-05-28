@@ -8,6 +8,16 @@ var index = {
   initialColorMode: "system",
   colors: {
     modes: {
+      cool: {
+        text: "hsl(230, 25%, 18%)",
+        background: "hsl(210, 50%, 96%)",
+        primary: "#F17816",
+        secondary: "#FFB23B",
+        highlight: "#16C4FD",
+        accent: "#FFBF5D",
+        muted: "#3F51B5",
+        gray: "#4A4A4A",
+      },
       deep: {
         text: "hsl(210, 50%, 96%)",
         background: "hsl(230, 25%, 18%)",

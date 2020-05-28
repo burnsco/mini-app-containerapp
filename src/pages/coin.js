@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
 
-import Heads from "../images/heads.jpg"
-import Tails from "../images/tails.jpg"
+import Heads from "../images/heads.png"
+import Tails from "../images/tails.png"
 
 export default () => {
   let [flip, setFlip] = useState(false)

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import CheckBox from "../../components/CheckBox"
+import { Checkbox } from "theme-ui"
 
 const Container = styled.div`
   margin-top: 5px;
@@ -21,7 +21,7 @@ const RemoveButton = styled.span`
 const ListItem = ({ title, removeItem, id, togglePacked, packed }) => {
   return (
     <Container>
-      <CheckBox
+      <Checkbox
         togglePacked={togglePacked}
         packed={packed}
         type="checkbox"
