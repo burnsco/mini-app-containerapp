@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, useColorMode, Button } from "theme-ui"
 
-const modes = ["deep", "swiss"]
+const modes = ["deep", "swiss", "dark", "cool"]
 
 export default props => {
   const [mode, setMode] = useColorMode()

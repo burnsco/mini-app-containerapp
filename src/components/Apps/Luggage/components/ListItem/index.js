@@ -1,19 +1,20 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Checkbox } from "theme-ui"
+import { Checkbox, Label } from "theme-ui"
 
 const Container = styled.div`
   margin-top: 5px;
-  display: block;
-  position: relative;
+  display: flex;
 `
 const Item = styled.span`
   font-size: 14px;
+
   margin-left: 8px;
 `
 const RemoveButton = styled.span`
+  margin-top: 2px;
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 8px;
   color: red;
   cursor: pointer;
 `
@@ -21,14 +22,16 @@ const RemoveButton = styled.span`
 const ListItem = ({ title, removeItem, id, togglePacked, packed }) => {
   return (
     <Container>
-      <Checkbox
-        togglePacked={togglePacked}
-        packed={packed}
-        type="checkbox"
-        name="packed"
-        id={id}
-      />
-      <Item>{title}</Item>
+      <Label htmlFor={id}>
+        <Checkbox
+          checked={packed}
+          onChange={() => togglePacked(id)}
+          value={packed}
+          id={id}
+          name={id}
+        />
+        <Item>{title}</Item>
+      </Label>
       <RemoveButton onClick={() => removeItem(id)}>Remove</RemoveButton>
     </Container>
   )

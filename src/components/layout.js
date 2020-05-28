@@ -14,6 +14,7 @@ export default props => (
         MozBoxSizing: "border-box",
       },
       minHeight: "100vh",
+      fontSize: [0, 1, 1],
       flexDirection: "column",
       webkitFontSmoothing: "antialiased",
       mozOsxFontSmoothing: "grayscale",

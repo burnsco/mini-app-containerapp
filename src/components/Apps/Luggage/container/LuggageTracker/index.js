@@ -5,15 +5,8 @@ import ListHeader from "../../components/ListHeader"
 import FilterItem from "../../components/FilterItem"
 import AddItem from "../../components/AddItem"
 import Counter from "../../components/Counter"
+import { Grid, Button, Box } from "theme-ui"
 
-const MarkButton = styled.button`
-  margin-top: 20px;
-  background: palevioletred;
-  color: white;
-  width: 400px;
-  height: 30px;
-  border: 2px solid palevioletred;
-`
 const LuggageTracker = ({
   unpackedItems,
   packedItems,
@@ -39,39 +32,45 @@ const LuggageTracker = ({
   )
 
   return (
-    <>
+    <Grid>
       <AddItem
         input={input}
         handleSubmit={handleSubmit}
         handleChange={handleChange}
       />
-      <Counter />
-      <ListHeader title="Unpacked Items" items={unpackedItems.length} />
-      <FilterItem handleChange={handleOne} value={filterOne} />
-      {filteredUnpackedItems.map(item => (
-        <ListItem
-          title={item.title}
-          key={item.id}
-          packed={item.packed}
-          togglePacked={togglePacked}
-          removeItem={removeItem}
-          id={item.id}
-        />
-      ))}
-      <ListHeader title="Packed Items" items={packedItems.length} />
-      <FilterItem handleChange={handleTwo} value={filterTwo} />
-      {filteredPackedItems.map(item => (
-        <ListItem
-          title={item.title}
-          key={item.id}
-          packed={item.packed}
-          togglePacked={togglePacked}
-          removeItem={removeItem}
-          id={item.id}
-        />
-      ))}
-      <MarkButton onClick={() => toggleAll()}>Mark All As Unpacked</MarkButton>
-    </>
+
+      <Grid sx={{ gridTemplateColumns: ["auto", "1fr 1fr"] }}>
+        <Box>
+          <ListHeader title="Unpacked Items" items={unpackedItems.length} />
+          <FilterItem handleChange={handleOne} value={filterOne} />
+          {filteredUnpackedItems.map(item => (
+            <ListItem
+              title={item.title}
+              key={item.id}
+              packed={item.packed}
+              togglePacked={togglePacked}
+              removeItem={removeItem}
+              id={item.id}
+            />
+          ))}
+        </Box>
+        <Box>
+          <ListHeader title="Packed Items" items={packedItems.length} />
+          <FilterItem handleChange={handleTwo} value={filterTwo} />
+          {filteredPackedItems.map(item => (
+            <ListItem
+              title={item.title}
+              key={item.id}
+              packed={item.packed}
+              togglePacked={togglePacked}
+              removeItem={removeItem}
+              id={item.id}
+            />
+          ))}
+        </Box>
+      </Grid>
+      <Button onClick={() => toggleAll()}>Mark All As Unpacked</Button>
+    </Grid>
   )
 }
 
