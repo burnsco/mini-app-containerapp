@@ -26,9 +26,7 @@ export default () => {
   return (
     <Layout>
       <h1>Count Flips</h1>
-
       <img src={flip ? Heads : Tails} height="18%" width="18%" alt="Heads" />
-
       <p>
         {" "}
         <button type="button" onClick={() => flipCoin()}>

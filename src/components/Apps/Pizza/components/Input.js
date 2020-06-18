@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react"
+import { Label } from "theme-ui"
 
 const Input = ({ label, value, handleChange }) => {
   return (
-    <div>
-      <label>{label}</label>
-      <input onChange={e => handleChange(e)} type="number" value={value} />
-    </div>
+    <>
+      <Label>
+        {label}
+        <input onChange={e => handleChange(e)} type="number" value={value} />
+      </Label>
+    </>
   )
 }
 

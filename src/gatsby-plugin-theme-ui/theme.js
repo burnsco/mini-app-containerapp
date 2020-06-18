@@ -3,6 +3,7 @@ var heading = {
   fontWeight: "heading",
   lineHeight: "heading",
 }
+
 var index = {
   useCustomProperties: true,
   initialColorMode: "system",

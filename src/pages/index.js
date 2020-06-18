@@ -7,7 +7,6 @@ import { Heading } from "theme-ui"
 const IndexPage = () => (
   <Layout>
     <SEO title="CB" />
-
     <Heading>
       A place to store the apps I first made in my coding journey.
     </Heading>
