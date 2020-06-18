@@ -1,14 +1,15 @@
 import { useState } from "react"
 /** @jsx jsx */
-import { jsx, Flex, Heading } from "theme-ui"
+import { jsx, Flex, Heading, Image } from "theme-ui"
+import "../styles/coin_flip.css"
 import Layout from "../components/layout"
 
 import Heads from "../images/heads.png"
 import Tails from "../images/tails.png"
-import Container from "../components/Container"
+import { Container } from "../components/Apps/Lottery/index"
 
 export default () => {
-  let [flipping, setFlipping] = useState
+  let [flipping, setFlipping] = useState(false)
   let [flip, setFlip] = useState(false)
   let [heads, setHeads] = useState(0)
   let [tails, setTails] = useState(0)
@@ -16,7 +17,7 @@ export default () => {
 
   const flipCoin = () => {
     let head = [true, false]
-
+    setFlipping(true)
     setFlips((flips += 1))
 
     let result = head[(Math.random() * head.length) | 0]
@@ -28,15 +29,36 @@ export default () => {
       setFlip((flip = false))
       setTails((tails += 1))
     }
+    setFlipping(false)
   }
 
   return (
     <Layout>
-      <Container>
-        <Heading as="h1">Flip & Count</Heading>
-        <img src={flip ? Heads : Tails} height="18%" width="18%" alt="Heads" />
+      <div
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <Heading as="h1" sx={{ height: "30%" }}>
+          Flip & Count
+        </Heading>
+        <div
+          className={flipping ? "falling_coin" : null}
+          sx={{ height: "30%" }}
+        >
+          <img
+            src={flip ? Heads : Tails}
+            height="100px"
+            width="100px"
+            alt="Heads"
+          />
+        </div>
 
-        <p>
+        <p sx={{ height: "30%" }}>
           {" "}
           <button type="button" onClick={() => flipCoin()}>
             Flip Me!
@@ -48,7 +70,7 @@ export default () => {
           heads and
           <em sx={{ color: "secondary" }}> {tails}</em> tails
         </p>
-      </Container>
+      </div>
     </Layout>
   )
 }

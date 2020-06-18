@@ -3,7 +3,7 @@ import Roll from "react-reveal/Roll"
 import styled from "@emotion/styled"
 import { Ball } from "./Ball"
 
-const Container = styled.div`
+export const Container = styled.div`
   border: 1px solid grey;
   border-radius: 2px;
   margin: 0 auto;
