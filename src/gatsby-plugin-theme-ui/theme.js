@@ -145,6 +145,10 @@ var index = {
     body: 1.5,
     heading: 1.25,
   },
+
+  radii: {
+    circle: "50rem",
+  },
   textStyles: {
     heading: heading,
     display: {

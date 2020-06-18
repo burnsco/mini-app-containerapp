@@ -1,12 +1,12 @@
 import React from "react"
+import Roll from "react-reveal/Roll"
 import styled from "@emotion/styled"
 import { Ball } from "./Ball"
 
 const Container = styled.div`
   border: 1px solid grey;
   border-radius: 2px;
-  min-width: 470px;
-  min-height: 150px;
+  margin: 0 auto;
 `
 const Title = styled.strong`
   color: burlywood;
@@ -14,10 +14,13 @@ const Title = styled.strong`
 const BallContainer = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 10px;
 `
 const GenerateButton = styled.button`
   background: blueviolet;
+  width: 100%;
+  height: 50px;
   color: white;
 `
 
@@ -33,12 +36,17 @@ function generateBalls(maxBalls, maxNum) {
   return ballsArray
 }
 
-function Lotto({ title, numBalls, maxNum, generate }) {
+function Lotto({ numBalls, maxNum, generate }) {
   return (
     <Container>
-      <Title>{title}</Title>
       <BallContainer>{generateBalls(numBalls, maxNum)}</BallContainer>
-      <GenerateButton onClick={() => generate()}>Generate</GenerateButton>
+      <GenerateButton
+        onClick={() => {
+          generate()
+        }}
+      >
+        Generate
+      </GenerateButton>
     </Container>
   )
 }
