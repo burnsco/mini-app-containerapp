@@ -1,10 +1,8 @@
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import ListItem from "../../components/ListItem"
 import ListHeader from "../../components/ListHeader"
 import FilterItem from "../../components/FilterItem"
 import AddItem from "../../components/AddItem"
-import Counter from "../../components/Counter"
 import { Grid, Button, Box } from "theme-ui"
 
 const LuggageTracker = ({

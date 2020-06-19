@@ -1,12 +1,11 @@
 import { useState } from "react"
 /** @jsx jsx */
-import { jsx, Flex, Heading, Image } from "theme-ui"
+import { jsx, Heading } from "theme-ui"
 import "../styles/coin_flip.css"
 import Layout from "../components/layout"
 
 import Heads from "../images/heads.png"
 import Tails from "../images/tails.png"
-import { Container } from "../components/Apps/Lottery/index"
 
 export default () => {
   let [flipping, setFlipping] = useState(false)

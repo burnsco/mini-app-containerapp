@@ -1,5 +1,4 @@
 import React from "react"
-import Roll from "react-reveal/Roll"
 import styled from "@emotion/styled"
 import { Ball } from "./Ball"
 
@@ -7,9 +6,6 @@ export const Container = styled.div`
   border: 1px solid grey;
   border-radius: 2px;
   margin: 0 auto;
-`
-const Title = styled.strong`
-  color: burlywood;
 `
 const BallContainer = styled.div`
   display: flex;
