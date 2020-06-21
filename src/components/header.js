@@ -4,7 +4,7 @@ import { useSiteMetadata } from "../hooks/useSiteMetaData.js"
 import ToggleColorMode from "./ToggleColorMode"
 import Container from "./Container"
 
-export default function Header() {
+export default () => {
   const { title } = useSiteMetadata()
 
   return (
