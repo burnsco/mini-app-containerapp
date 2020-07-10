@@ -37,7 +37,7 @@ export default class MonsterRolodex extends Component {
         <SearchBox
           type="search"
           value={input}
-          handleChange={this.handleChange}
+          handleChange={e => this.handleChange(e)}
           placeholder="search..."
         />
 

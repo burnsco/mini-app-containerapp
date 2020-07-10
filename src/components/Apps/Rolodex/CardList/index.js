@@ -1,19 +1,16 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { Card } from "../Card"
-
-const Container = styled.div`
-  width: 95vw;
-  margin: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-`
+import { Grid } from "theme-ui"
 
 export const CardList = ({ users }) => (
-  <Container>
+  <Grid
+    sx={{
+      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    }}
+  >
     {users.map(user => (
       <Card user={user} key={user.id} />
     ))}
-  </Container>
+  </Grid>
 )
