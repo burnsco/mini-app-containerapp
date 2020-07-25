@@ -1,10 +1,10 @@
-var heading = {
+const heading = {
   fontFamily: "heading",
   fontWeight: "heading",
   lineHeight: "heading",
 }
 
-var index = {
+const index = {
   useCustomProperties: true,
   initialColorMode: "system",
   colors: {

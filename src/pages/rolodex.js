@@ -1,24 +1,21 @@
-import React, { Component } from "react"
-import { SearchBox } from "../components/Apps/Rolodex/SearchBox"
-import { CardList } from "../components/Apps/Rolodex/CardList"
-import Layout from "../components/layout"
+import React, { Component } from 'react'
+import { SearchBox } from '../components/Apps/Rolodex/SearchBox'
+import { CardList } from '../components/Apps/Rolodex/CardList'
+import Layout from '../components/layout'
 
 export default class MonsterRolodex extends Component {
   constructor(props) {
     super(props)
     this.state = {
       users: [],
-      input: "",
+      input: '',
     }
   }
+
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
-      .then(json =>
-        this.setState(state => ({
-          users: json,
-        }))
-      )
+      .then(json => this.setState(...json))
   }
 
   handleChange(e) {

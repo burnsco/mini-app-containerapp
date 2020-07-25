@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Inter:400,500,600,700,900,`],
-        display: "swap",
+        display: 'swap',
       },
     },
     {
@@ -22,7 +22,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: "gatsby-plugin-sharp",
+      resolve: 'gatsby-plugin-sharp',
       options: {
         useMozJpeg: true,
         stripMetadata: true,
@@ -41,6 +41,5 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
-    "gatsby-plugin-theme-ui",
   ],
 }

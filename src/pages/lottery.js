@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
-import Lotto from "../components/Apps/Lottery"
-import { Heading, Label, Input } from "theme-ui"
+import React, { useState } from 'react'
+import { Heading, Label, Input } from 'theme-ui'
+import Layout from '../components/layout'
+import Lotto from '../components/Apps/Lottery'
 
-export default () => {
+export default function Lottery() {
   const [generate, setGenerate] = useState(false)
   const [amountOfBalls, setAmountOfBalls] = useState(7)
   const [numberLimit, setNumberLimit] = useState(99)

@@ -1,21 +1,7 @@
-import React from "react"
+import { jsx, InitializeColorMode } from 'theme-ui'
 
-import {
-  ApolloProvider,
-  ApolloClient,
-  HttpLink,
-  InMemoryCache,
-} from "@apollo/client"
-import fetch from "isomorphic-fetch"
+export { wrapRootElement } from './src/gatsby-plugin-theme-ui/provider'
 
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  link: new HttpLink({
-    fetch,
-    uri: "https://favware.tech/api",
-  }),
-})
-
-export const wrapRootElement = ({ element }) => (
-  <ApolloProvider client={client}>{element}</ApolloProvider>
-)
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([jsx(InitializeColorMode, { key: 'theme-ui-no-flash' })])
+}

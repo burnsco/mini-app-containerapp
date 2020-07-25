@@ -1,8 +1,8 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 
-import calculatePizzasNeeded from "../lib/calculate-pizzas-needed"
+import calculatePizzasNeeded from '../lib/calculate-pizzas-needed'
 
-import PizzaCalculator from "./PizzaCalculator"
+import PizzaCalculator from './PizzaCalculator'
 
 const initialState = {
   numberOfPeople: 10,

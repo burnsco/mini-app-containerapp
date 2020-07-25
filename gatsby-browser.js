@@ -1,1 +1,1 @@
-export { wrapRootElement } from "./gatsby-ssr"
+export { wrapRootElement } from './src/gatsby-plugin-theme-ui/provider'
