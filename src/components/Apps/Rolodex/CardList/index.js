@@ -1,12 +1,11 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { Card } from "../Card"
-import { Grid } from "theme-ui"
+import React from 'react'
+import { Grid } from 'theme-ui'
+import { Card } from '../Card'
 
 export const CardList = ({ users }) => (
   <Grid
     sx={{
-      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
     }}
   >
     {users.map(user => (

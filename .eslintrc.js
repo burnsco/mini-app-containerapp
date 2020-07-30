@@ -52,6 +52,8 @@ module.exports = {
     'max-len': 0,
     'import/extensions': 0,
     'no-underscore-dangle': 0,
+    'import/no-named-as-default': 0,
+    'import/no-named-as-default-member': 0,
     'consistent-return': 0,
     'react/display-name': 1,
     'react/button-has-type': 0,

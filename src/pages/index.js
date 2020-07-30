@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="CB" />
+    <SEO title="Mini App Container Site" />
     <Heading>
       A place to store the apps I first made in my coding journey.
     </Heading>
