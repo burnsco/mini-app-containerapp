@@ -1,46 +1,45 @@
 /** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
-import Header from "./Header"
-import Container from "./Container"
-import NavLinkList from "./NavLinkList"
-import Footer from "./Footer"
+import { jsx, Flex } from 'theme-ui'
+import Header from './Header'
+import Container from './Container'
+import NavLinkList from './NavLinkList'
+import Footer from './Footer'
 
-export default props => (
+export const Layout = ({ children }) => (
   <Flex
     sx={{
-      "*,\n  *:before,\n  *:after": {
-        boxSizing: "border-box",
-        WebkitBoxSizing: "border-box",
-        MozBoxSizing: "border-box",
+      '*,\n  *:before,\n  *:after': {
+        boxSizing: 'border-box',
+        WebkitBoxSizing: 'border-box',
+        MozBoxSizing: 'border-box',
       },
-      minHeight: "100vh",
+      minHeight: '100vh',
       fontSize: [0, 1, 1],
-      flexDirection: "column",
-      webkitFontSmoothing: "antialiased",
-      mozOsxFontSmoothing: "grayscale",
-      textRendering: "optimizeLegibility",
-      overflowX: "hidden",
-      wordWrap: "break-word",
-      fontKerning: "normal",
-      mozFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
-      msFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
-      webkitFontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
-      fontFeatureSettings: ["case", 1, "rlig", 1, "calt", 0],
-      variant: "layout.root",
+      flexDirection: 'column',
+      webkitFontSmoothing: 'antialiased',
+      mozOsxFontSmoothing: 'grayscale',
+      textRendering: 'optimizeLegibility',
+      overflowX: 'hidden',
+      wordWrap: 'break-word',
+      fontKerning: 'normal',
+      mozFontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
+      msFontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
+      webkitFontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
+      fontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
+      variant: 'layout.root',
     }}
   >
-    <header>
-      <Header />
-    </header>
+    <Header />
 
     <aside>
       <NavLinkList />
     </aside>
 
-    <main sx={{ variant: "layout.main" }}>
-      <Container>{props.children}</Container>
+    <main sx={{ variant: 'layout.main' }}>
+      <Container>{children}</Container>
     </main>
 
     <Footer />
   </Flex>
 )
+export default Layout

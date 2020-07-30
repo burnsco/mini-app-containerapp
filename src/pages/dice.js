@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import '../components/Apps/Dice/Dice.css'
 import Die from '../components/Apps/Dice/Die'
 
-export default function App() {
+export default function Dice() {
   const [dieOne, setDieOne] = useState('one')
   const [dieTwo, setDieTwo] = useState('six')
   const [rolling, setRolling] = useState(false)
+  const dieValues = ['one', 'two', 'three', 'four', 'five', 'six']
 
   const rollDice = () => {
     setRolling(true)
-
-    const dieValues = ['one', 'two', 'three', 'four', 'five', 'six']
 
     setDieOne(dieValues[Math.random() * dieValues.length])
 

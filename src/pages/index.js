@@ -1,12 +1,10 @@
 import React from 'react'
 
 import { Heading } from 'theme-ui'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Mini App Container Site" />
     <Heading>
       A place to store the apps I first made in my coding journey.
     </Heading>

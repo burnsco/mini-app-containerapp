@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Heading } from 'theme-ui'
 import '../styles/coin_flip.css'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 import Heads from '../images/heads.png'
 import Tails from '../images/tails.png'

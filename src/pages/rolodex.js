@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { SearchBox } from '../components/Apps/Rolodex/SearchBox'
 import { CardList } from '../components/Apps/Rolodex/CardList'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 export default class MonsterRolodex extends Component {
   constructor(props) {

@@ -1,21 +1,21 @@
 /** @jsx jsx */
-import { jsx, Heading, Flex } from "theme-ui"
-import { useSiteMetadata } from "../hooks/useSiteMetaData.js"
-import ToggleColorMode from "./ToggleColorMode"
-import Container from "./Container"
+import { jsx, Heading, Flex } from 'theme-ui'
+import { useSiteMetadata } from '../hooks/useSiteMetaData.js'
+import ToggleColorMode from './ToggleColorMode'
+import Container from './Container'
 
-export default () => {
+export default function Header() {
   const { title } = useSiteMetadata()
 
   return (
-    <Container variant="layout.header">
+    <Container as="header" variant="layout.header">
       <Flex
         sx={{
-          alignItems: "center",
+          alignItems: 'center',
         }}
       >
         <Heading variant="textStyles.display">{title}</Heading>
-        <div sx={{ mx: "auto" }}>
+        <div sx={{ ml: 5 }}>
           <ToggleColorMode>Toggle Theme</ToggleColorMode>
         </div>
       </Flex>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Heading, Label, Input } from 'theme-ui'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Lotto from '../components/Apps/Lottery'
 
 export default function Lottery() {
