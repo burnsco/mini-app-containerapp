@@ -1,20 +1,23 @@
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import '../components/Apps/Dice/Dice.css'
-import Die from '../components/Apps/Dice/Die'
+import RenderIcon from '../components/Apps/Dice/RenderDie'
+
+function getRandomInt() {
+  return Math.floor(Math.random() * Math.floor(6 - 1) + 1)
+}
 
 export default function Dice() {
   const [dieOne, setDieOne] = useState('one')
-  const [dieTwo, setDieTwo] = useState('six')
+  const [dieTwo, setDieTwo] = useState('five')
   const [rolling, setRolling] = useState(false)
-  const dieValues = ['one', 'two', 'three', 'four', 'five', 'six']
 
   const rollDice = () => {
     setRolling(true)
 
-    setDieOne(dieValues[Math.random() * dieValues.length])
+    setDieOne(getRandomInt().toString())
 
-    setDieTwo(dieValues[Math.random() * dieValues.length])
+    setDieTwo(getRandomInt().toString())
 
     setTimeout(() => {
       setRolling(false)
@@ -24,16 +27,14 @@ export default function Dice() {
   return (
     <Layout>
       <div className={rolling ? 'dice shakeDice' : 'dice'}>
-        <Die value={dieOne} />
-        <Die value={dieTwo} />
+        <RenderIcon height="6em" width="6em" value={dieOne} />
+        <RenderIcon height="6em" width="6em" value={dieTwo} />
       </div>
       <button
         type="button"
         disabled={rolling}
         style={{ fontSize: 20, width: 200, height: 70, marginTop: 50 }}
-        onClick={() => {
-          rollDice()
-        }}
+        onClick={() => rollDice()}
       >
         <p>{rolling ? 'Rolling...' : 'Roll Dice'}</p>
       </button>
