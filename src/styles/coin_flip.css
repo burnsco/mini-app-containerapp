@@ -5,7 +5,7 @@
 
 .falling_coin {
   width: 100px;
-  animation: infinite-spinning 4s infinite;
+  animation: infinite-spinning 2s infinite;
   margin: 0;
 }
 
