@@ -1,45 +1,49 @@
-import React, { Component } from 'react'
-import { SearchBox } from '../components/Apps/Rolodex/SearchBox'
-import { CardList } from '../components/Apps/Rolodex/CardList'
+import { useEffect, useState } from 'react'
+/** @jsx jsx */
+import { jsx, Input, Grid } from 'theme-ui'
+import { Card } from '../components/Apps/Rolodex/Card'
+import Container from '../components/Container'
 import Layout from '../components/Layout'
 
-export default class MonsterRolodex extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      users: [],
-      input: '',
-    }
-  }
+const MonsterRolodex = () => {
+  const [users, setUsers] = useState([])
+  const [input, setInput] = useState('')
 
-  componentDidMount() {
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
-      .then(json => this.setState(...json))
+      .then(json => setUsers([...json]))
+  }, [])
+
+  const handleChange = e => {
+    setInput(e.target.value)
   }
 
-  handleChange(e) {
-    this.setState({ input: e.target.value })
-  }
+  const filteredUsers = users.filter(user =>
+    user.name.toLowerCase().includes(input.toLowerCase())
+  )
 
-  render() {
-    const { users, input } = this.state
-    const filteredUsers = users.filter(user =>
-      user.name.toLowerCase().includes(input.toLowerCase())
-    )
-
-    return (
-      <Layout>
-        <h1>Monsters Rolodex</h1>
-        <SearchBox
+  return (
+    <Layout>
+      <Container>
+        <Input
           type="search"
           value={input}
-          handleChange={e => this.handleChange(e)}
+          onChange={e => handleChange(e)}
           placeholder="search..."
         />
-
-        <CardList users={filteredUsers} />
-      </Layout>
-    )
-  }
+        <Grid
+          sx={{
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          }}
+        >
+          {filteredUsers.map(user => (
+            <Card user={user} key={user.id} />
+          ))}
+        </Grid>
+      </Container>
+    </Layout>
+  )
 }
+
+export default MonsterRolodex

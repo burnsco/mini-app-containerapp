@@ -8,12 +8,12 @@ import dice5 from '@iconify/icons-bi/dice-5'
 import dice6 from '@iconify/icons-bi/dice-6'
 import PropTypes from 'prop-types'
 
-addIcon('one', dice1)
-addIcon('two', dice2)
-addIcon('three', dice3)
-addIcon('four', dice4)
-addIcon('five', dice5)
-addIcon('six', dice6)
+addIcon('1', dice1)
+addIcon('2', dice2)
+addIcon('3', dice3)
+addIcon('4', dice4)
+addIcon('5', dice5)
+addIcon('6', dice6)
 
 export default function RenderIcon(props) {
   const { value } = props

@@ -14,7 +14,7 @@ export const Layout = ({ children }) => (
         MozBoxSizing: 'border-box',
       },
       minHeight: '100vh',
-      fontSize: [0, 1, 1],
+      fontSize: [0, 1, 2],
       flexDirection: 'column',
       webkitFontSmoothing: 'antialiased',
       mozOsxFontSmoothing: 'grayscale',
@@ -26,7 +26,6 @@ export const Layout = ({ children }) => (
       msFontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
       webkitFontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
       fontFeatureSettings: ['case', 1, 'rlig', 1, 'calt', 0],
-      variant: 'layout.root',
     }}
   >
     <Header />
