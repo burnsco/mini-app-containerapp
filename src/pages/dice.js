@@ -8,8 +8,8 @@ function getRandomInt() {
 }
 
 export default function Dice() {
-  const [dieOne, setDieOne] = useState('one')
-  const [dieTwo, setDieTwo] = useState('five')
+  const [dieOne, setDieOne] = useState('1')
+  const [dieTwo, setDieTwo] = useState('4')
   const [rolling, setRolling] = useState(false)
 
   const rollDice = () => {

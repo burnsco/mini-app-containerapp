@@ -168,6 +168,9 @@ const index = {
     nav: {
       textTransform: 'uppercase',
       letterSpacing: '0.2em',
+      '&:hover': {
+        color: 'accent',
+      },
     },
   },
   cards: {
